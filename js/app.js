@@ -44,7 +44,7 @@ function buildtheNav(){
 	i++
 	
 	
-	};
+	}
 	// append the fragement to the nav bar
 	navg.appendChild(myDocFragement);
 	let links=document.querySelectorAll('a');
@@ -54,13 +54,13 @@ function buildtheNav(){
     let sc=document.querySelector('#section'+li.id);
     sc.scrollIntoView({behavior: "smooth"});
 	
-	});		
+	})		
 		
 		
-	};
+	}
 	
 	
-};
+}
 
 
 // create function to check if the user stopped scrolling for a bunch of time ( 5 sec ) the navigation bar will disappear and if
@@ -76,14 +76,14 @@ function hideBar(){
 		// after 5 sec the bar will disappear
 		timer=setTimeout(function(){
 			document.querySelector("ul").style.display = "none";
-		},5000);
+		},5000)
 		// if the scrolling event used again the bar will appear again
 		window.addEventListener('scroll',function(){
 						document.querySelector("ul").style.display = "block";
 
-		});
+		})
 		
-	});
+	})
 
 	
 }
@@ -95,9 +95,15 @@ function highLight(){
 		for(let sec of sections){
 		let bounding=sec.getBoundingClientRect();
 		console.log(bounding);
-		if(bounding.top>= -(sec.offsetHeight) && bounding.left>= -(sec.offsetWidth) && bounding.right<= (window.innerWidth || document.documentElement.clientWidth) + sec.offsetWidth && bounding.bottom<= (window.innerHeight || document.documentElement.clientHeight)+sec.offsetHeight){
+		if(bounding.top>= -(sec.offsetHeight) && bounding.left>= -(sec.offsetWidth) && bounding.right<= (window.innerWidth || document.documentElement.clientWidth)  && bounding.bottom<= (window.innerHeight || document.documentElement.clientHeight)){
 			
 			sec.classList.add('your-active-class');
+			let ls=document.querySelectorAll('a');
+			for(let li of ls){
+				if(sec.dataset.nav === li.innerText){
+					li.classList.add('active-link');
+				}
+			}
 			
 		}
 		else{
