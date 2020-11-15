@@ -1,13 +1,19 @@
-# Landing Page Project
+# Project Description
 
-## Table of Contents
+Create Dynamic Landing page instead of static one, through using javascript i added multiple function to manipulate the DOM.
 
-* [Instructions](#instructions)
+## Main Functions
 
-## Instructions
+* Create navigation bar and add sectionss to it dynamically , if we added more sections the elements on the navigation bar will increase also automatically.
+* if you clicked to any link on the bar , the page will scroll automatically to the targeted element on the page.
+* if you stopped scrolling for 5 seconds or more , the bar will desappear automatically for better experience and it will return back if you are scrolling again.
+* highlight the current section on our viewport and remove the highlighting after the section is not in our viewport.
+## Technologies
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
 
-To get started, open `js/app.js` and start building out the app's functionality
+1. HTML
+2. CSS
+3. JavaScript
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+
+
